@@ -1,0 +1,652 @@
+@use "lib/normalize";
+@use "import/var";
+@use "import/utility";
+@use "import/mixin_common";
+@use "import/mixin_project";
+
+/**************************
+・テーブルのルール
+基本的にtableにはclassを指定しない
+
+静的コーディング この形を基本とする
+<figure class="table_wrapper">
+    <table>
+        <thead></thead>
+        <tbody><tbody>
+    </table>
+<figure>
+
+wordpressの標準blockの場合
+<figure class="wp-block-table">
+    <table>
+        <thead></thead>
+        <tbody><tbody>
+    </table>
+<figure>
+
+wordpressのプラグインblockの場合（PublishPress Blocks）
+<table class="wp-block-advgb-table">
+    <thead></thead>
+    <tbody><tbody>
+</table>
+*/
+
+$padding: 1.2em;
+$th_width: 100px;
+$border_color: var.palette("table", "border");
+$table_width: 1000px;
+$thead_th_color: var.palette("table", "thead_th_color");
+$thead_th_bg: var.palette("table", "thead_th_bg");
+$tbody_th_color: var.palette("table", "tbody_th_color");
+$tbody_th_bg: var.palette("table", "tbody_th_bg");
+$caption_color: var.palette("orange");
+$radius: 0;
+
+.table_wrapper {
+	@media #{var.$pc} {
+		&:not(._width_max) {
+			//padding-right: 40px;
+		}
+	}
+}
+
+// 静的時基本
+.table_wrapper table, table,
+// wp記事詳細画面用
+.root .wpnews table,
+// wpプラグイン table block
+table.wp-block-advgb-table,
+// wp標準 table block
+.wp-block-table table {
+	border-collapse: separate !important;
+	border-spacing: 0 !important;
+	width: 100%;
+	max-width: $table_width;
+	margin: 0 auto;
+	border-radius: $radius;
+	overflow: hidden;
+	box-sizing: border-box;
+	border: 1px solid $border_color;
+	position: relative;
+
+	caption {
+		display: none;
+
+		&.cap {
+			display: block;
+			text-align: left;
+			font-weight: bold;
+			color: $caption_color;
+			padding-bottom: 0.5em;
+		}
+	}
+
+	th,
+	td {
+		font-weight: normal;
+		box-sizing: border-box;
+		text-align: left;
+		min-height: 70px;
+
+		&,
+		p {
+			@media #{var.$pc} {
+				line-height: 1.7;
+			}
+
+			@media #{var.$sp} {
+				line-height: 1.7;
+			}
+		}
+
+		@media #{var.$pc} {
+			padding: $padding $padding * 1.5;
+		}
+
+		@media #{var.$sp} {
+			padding: $padding * 0.8;
+		}
+	}
+
+	thead {
+		position: relative;
+
+		th {
+			color: $thead_th_color;
+			background-color: $thead_th_bg;
+			text-align: center;
+			border-bottom: 1px solid $border_color;
+
+			&:not(:last-of-type) {
+				border-right: 1px solid $border_color;
+			}
+
+			&.schedule_table_th {
+				min-width: 140px;
+			}
+		}
+	}
+
+	tbody {
+		box-sizing: border-box;
+		position: relative;
+
+		&:first-child {
+			tr {
+				&:first-of-type {
+					th,
+					td {
+					}
+
+					> * {
+						&:first-child {
+							border-radius: $radius 0 0;
+						}
+
+						&:last-child {
+							border-radius: 0 $radius 0 0;
+						}
+					}
+				}
+			}
+		}
+
+		tr {
+			td {
+				&:not(:last-of-type) {
+					border-right: 1px solid $border_color;
+				}
+			}
+
+			&:last-of-type {
+				th,
+				td {
+				}
+
+				> * {
+					&:first-child {
+						border-radius: 0 0 0 $radius;
+					}
+
+					&:last-child {
+						border-radius: 0 0 $radius;
+					}
+				}
+			}
+
+			th,
+			td {
+				&:last-child {
+					box-sizing: unset;
+				}
+
+				&:first-child {
+					box-sizing: unset;
+				}
+			}
+		}
+
+		th {
+			border-right: 1px solid $border_color;
+			color: $tbody_th_color;
+			background-color: $tbody_th_bg;
+			vertical-align: middle;
+			text-align: center;
+
+			@media #{var.$pc} {
+				width: 200px;
+			}
+
+			@media #{var.$sp} {
+				min-width: 100px;
+			}
+
+			@media #{var.$xs2} {
+				min-width: 50px;
+			}
+		}
+	}
+
+	tbody:not(.products_tbody) {
+		tr {
+			td {
+				background-color: #ffffff;
+			}
+
+			&:not(:last-of-type) {
+				th,
+				td {
+					border-bottom: 1px dotted $border_color;
+				}
+			}
+		}
+	}
+
+	.number-cell {
+		text-align: right;
+	}
+}
+
+.root .wpnews table {
+	width: auto;
+
+	tbody th {
+		width: inherit;
+	}
+}
+
+/**************************
+
+スマホ時横スクロールさせるためのstyle
+
+*/
+.fixed_table {
+	position: relative;
+	overflow-x: auto;
+	box-sizing: border-box;
+	border-radius: $radius;
+
+	table {
+		box-sizing: border-box;
+		position: static;
+	}
+
+	thead {
+		border-bottom: none !important;
+	}
+
+	@media #{var.$sp} {
+		table {
+			width: $table_width;
+		}
+
+		th {
+			width: auto !important;
+		}
+	}
+}
+
+// スクロールさせる時に左端のセルを動かさない
+.fixed_table._fixed_th table {
+	overflow: auto;
+	box-sizing: border-box;
+	position: static;
+
+	thead {
+		tr {
+			th {
+				&:last-of-type {
+					border-radius: 0 $radius 0 0;
+				}
+			}
+		}
+	}
+}
+
+.fixed_table._fixed_th table th:first-child {
+	position: sticky;
+	left: 0;
+	z-index: 2;
+
+	@media #{var.$sm} {
+		max-width: 100px;
+	}
+
+	@media #{var.$xs2} {
+		max-width: 50px;
+	}
+}
+
+.fixed_table._fixed_th table td:first-child {
+	position: sticky;
+	left: 0;
+	border-left: 1px solid #c4c4c4;
+	z-index: 2;
+
+	@media #{var.$sm} {
+		max-width: 100px;
+	}
+
+	@media #{var.$xs2} {
+		max-width: 50px;
+	}
+}
+
+// スクロールの指アイコン
+._yubi {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(#000000, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: $radius;
+	z-index: 10;
+
+	img {
+		width: 85px;
+		display: block;
+	}
+
+	@media #{var.$pc} {
+		display: none;
+	}
+
+	.products_container & {
+		@media #{var.$lg1260} {
+			display: flex;
+		}
+	}
+}
+
+/**************************
+
+さまざまなオプション
+wordpress標準table block用
+
+*/
+/* stylelint-disable-next-line no-duplicate-selectors */
+.table_wrapper {
+	&.small_padding {
+		td,
+		th {
+			padding: 1.2em 1em;
+
+			@media #{var.$pc} {
+				padding: 1.2em 0.8em;
+			}
+
+			@media #{var.$isp} {
+				padding: 1.2em 0.5em;
+			}
+		}
+	}
+}
+
+table {
+	._sm > & {
+		max-width: 31em;
+	}
+
+	._md > & {
+		max-width: 50em;
+	}
+
+	._td_right > & {
+		td {
+			text-align: right;
+		}
+	}
+
+	._th_right > & {
+		th {
+			text-align: right;
+		}
+	}
+
+	._thead_th_right > & {
+		thead th {
+			text-align: right;
+		}
+	}
+
+	._tbody_th_right > & {
+		thead th {
+			text-align: right;
+		}
+	}
+
+	._center > & {
+		th,
+		td {
+			text-align: center;
+		}
+	}
+
+	._th_long > & {
+		tbody {
+			th {
+				vertical-align: top;
+
+				@media #{var.$pc} {
+					width: 250px;
+				}
+
+				@media #{var.$sp} {
+					width: 250px * 0.6;
+				}
+			}
+		}
+	}
+
+	._th_50 > & {
+		th {
+			width: 50%;
+		}
+	}
+
+	._th_center > & {
+		th {
+			text-align: center;
+		}
+	}
+
+	._td_center > & {
+		td {
+			text-align: center;
+		}
+	}
+
+	._thead_th_auto > & {
+		tbody {
+			th {
+				width: auto;
+				min-width: 0;
+			}
+		}
+	}
+
+	._th_auto > & {
+		tbody {
+			th {
+				width: auto;
+			}
+		}
+	}
+
+	._td_auto > & {
+		tbody {
+			td {
+				width: auto;
+			}
+		}
+	}
+
+	._td_middle > & {
+		tbody {
+			td {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	._noborder > & {
+		th,
+		td {
+			border: 0 none;
+			background-color: transparent;
+			text-align: left;
+			vertical-align: top;
+		}
+
+		th {
+			padding-right: 2em;
+		}
+	}
+}
+
+/**************************
+
+さまざまなオプション
+wordpressプラグインtable block用
+
+*/
+/* stylelint-disable-next-line no-duplicate-selectors */
+table {
+	&._sm {
+		max-width: 31em;
+	}
+
+	&._md {
+		max-width: 50em;
+	}
+
+	&._td_right {
+		td {
+			text-align: right;
+		}
+	}
+
+	&._th_right {
+		th {
+			text-align: right;
+		}
+	}
+
+	&._thead_th_right {
+		thead th {
+			text-align: right;
+		}
+	}
+
+	&._tbody_th_right {
+		thead th {
+			text-align: right;
+		}
+	}
+
+	&._center {
+		th,
+		td {
+			text-align: center;
+		}
+	}
+
+	&._th_long {
+		tbody {
+			th {
+				vertical-align: top;
+
+				@media #{var.$pc} {
+					width: 250px;
+				}
+
+				@media #{var.$sp} {
+					width: 250px * 0.6;
+				}
+			}
+		}
+	}
+
+	&._th_50 {
+		th {
+			width: 50%;
+		}
+	}
+
+	&._th_center {
+		th {
+			text-align: center;
+		}
+	}
+
+	&._td_center {
+		td {
+			text-align: center;
+		}
+	}
+
+	&._thead_th_auto {
+		tbody {
+			th {
+				width: auto;
+				min-width: 0;
+			}
+		}
+	}
+
+	&._th_auto {
+		tbody {
+			th {
+				width: auto;
+			}
+		}
+	}
+
+	&._td_auto {
+		tbody {
+			td {
+				width: auto;
+			}
+		}
+	}
+
+	&._td_middle {
+		tbody {
+			td {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&._noborder {
+		th,
+		td {
+			border: 0 none;
+			background-color: transparent;
+			text-align: left;
+			vertical-align: top;
+		}
+
+		th {
+			padding-right: 2em;
+		}
+	}
+}
+
+/*
+
+<div class="_h3">table._no_border</div>
+
+画像だけの table を想定
+
+*/
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+table {
+	table._no_border {
+		width: auto;
+		margin: auto;
+
+		th,
+		td {
+			padding: 0 1em;
+			vertical-align: middle;
+		}
+	}
+}
+
+table._underline {
+	tr {
+		&:not(:last-child) {
+			th,
+			td {
+				border: 0 none;
+				border-bottom: 1px solid #d2d2d2;
+			}
+		}
+	}
+}

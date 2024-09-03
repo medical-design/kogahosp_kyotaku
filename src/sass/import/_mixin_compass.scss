@@ -1,0 +1,221 @@
+@use "sass:math";
+@use "mixin_common";
+
+@function opposite-direction($directions) {
+	$opposite-directions: ();
+	$direction-map: (
+		"top": "bottom",
+		"right": "left",
+		"bottom": "top",
+		"left": "right",
+		"center": "center",
+		"ltr": "rtl",
+		"rtl": "ltr",
+	);
+
+	@each $direction in $directions {
+		$direction: to-lower-case($direction);
+
+		@if map-has-key($direction-map, $direction) {
+			$opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
+			/* stylelint-disable-next-line at-rule-empty-line-before */
+		} @else {
+			@warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+		}
+	}
+
+	@return $opposite-directions;
+}
+
+@mixin reset-box-model {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/**************************
+Compass Text Replacement
+*/
+@mixin replace-text($img, $x: 50%, $y: 50%) {
+	background: {
+		image: $img;
+		repeat: no-repeat;
+		position: $x $y;
+	}
+}
+
+@mixin hide-text($direction: left) {
+	@if $direction == left {
+		$approximate-em-value: math.div(12px, 1em);
+		$wider-than-any-screen: -9999em;
+
+		text-indent: $wider-than-any-screen * $approximate-em-value;
+		overflow: hidden;
+		text-align: left;
+		/* stylelint-disable-next-line at-rule-empty-line-before */
+	} @else {
+		// slightly wider than the box prevents issues with inline-block elements
+		text-indent: 110%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
+
+@mixin squish-text {
+	font: math.div(0, 0) serif;
+	text-shadow: none;
+	color: transparent;
+}
+
+/**************************
+Inline List
+*/
+@mixin inline-list {
+	list-style-type: none;
+
+	&,
+	& > li,
+	& > * {
+		margin: 0;
+		padding: 0;
+		display: inline;
+	}
+}
+
+@mixin delimited-list($separator: ", ") {
+	@include inline-list;
+
+	li {
+		&::after {
+			content: $separator;
+		}
+
+		&:last-child {
+			&::after {
+				content: "";
+			}
+		}
+	}
+}
+
+/**************************
+Inline Block List
+*/
+@mixin inline-block-list($padding: false, $chop: false) {
+	@include inline-block-list-container;
+
+	& > li,
+	& > * {
+		@include inline-block-list-item($padding);
+
+		@if $chop != false {
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@mixin inline-block-list-container {
+	@include horizontal-list-container;
+}
+
+@mixin inline-block-list-item($padding: false) {
+	@include no-bullet;
+	@include inline-block;
+
+	white-space: nowrap;
+
+	@if $padding {
+		padding: {
+			left: $padding;
+			right: $padding;
+		}
+	}
+}
+
+@mixin inline-block($alignment: middle) {
+	// legacy support for VERY old firefox
+	// standard
+	display: inline-block;
+
+	@if $alignment and $alignment != none {
+		vertical-align: $alignment;
+	}
+}
+
+/**************************
+horizontal-list
+*/
+
+@mixin horizontal-list-container {
+	// @include reset-box-model;
+	@include mixin_common.clearfix;
+}
+
+@mixin horizontal-list-item($padding: 4px, $direction: left) {
+	@include no-bullet;
+
+	white-space: nowrap;
+	float: $direction;
+
+	@if $padding {
+		padding: {
+			left: $padding;
+			right: $padding;
+		}
+
+		&:first-child {
+			padding-#{$direction}: 0;
+		}
+		$opposite-direction: right;
+
+		@if $direction == right {
+			$opposite-direction: left;
+		}
+
+		&:last-child {
+			padding-#{$opposite-direction}: 0;
+		}
+	}
+}
+
+@mixin horizontal-list($padding: 4px, $direction: left) {
+	@include horizontal-list-container;
+
+	> li,
+	> * {
+		@include horizontal-list-item($padding, $direction);
+	}
+}
+
+/**************************
+Bullets
+*/
+@mixin no-bullet {
+	list-style-image: none;
+	list-style-type: none;
+	margin-left: 0;
+}
+
+@mixin no-bullets {
+	list-style: none;
+
+	li {
+		@include no-bullet;
+	}
+}
+
+@mixin pretty-bullets($bullet-icon, $width: image-width($bullet-icon), $height: image-height($bullet-icon), $line-height: 18px, $padding: 14px) {
+	margin-left: 0;
+
+	li {
+		padding-left: $padding;
+		background: image-url($bullet-icon) no-repeat math.div(($padding - $width), 2) math.div(($line-height - $height), 2);
+		list-style-type: none;
+	}
+}

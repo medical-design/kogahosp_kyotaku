@@ -1,0 +1,222 @@
+@mixin default_font-family {
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	font-weight: 500;
+}
+
+@mixin zenkaku_r {
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	font-weight: 400;
+}
+
+@mixin zenkaku_m {
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	font-weight: 500;
+}
+
+@mixin zenkaku_b {
+	font-family: "Zen Kaku Gothic Antique", sans-serif;
+	font-weight: 700;
+}
+
+@mixin jost_m {
+	font-family: Jost, sans-serif;
+	font-weight: 500;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+@mixin jost_sb {
+	font-family: Jost, sans-serif;
+	font-weight: 600;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+@mixin jost_b {
+	font-family: Jost, sans-serif;
+	font-weight: 700;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+// @mixin shuei_l {
+// 	// font-family: '秀英明朝 L';
+// 	font-family: "秀英明朝 L", "DNPShueiMinPr6-L", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin shuei_m {
+// 	// font-family: '秀英明朝 M';
+// 	// font-family: FOT-筑紫明朝 Pr6 RB または TsukuMinPr6-RB
+// 	font-family: "秀英明朝 M", "DNPShueiMinPr6-M", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin din {
+// 	// font-family: 'Oswald', sans-serif;
+// 	// font-family: "DINEngschriftLTPro";
+// 	font-family: 'DINNextLTPro-Regular';
+// 	// font-family: DINEngschriftLTPro;
+// 	letter-spacing: -.02em;
+// 	font-weight: normal;
+// }
+
+// @mixin bokutoh($size: 'M') {
+// 	font-family: "FOT-ロダン墨東 Pro #{$size}", "RodinBokutohPro-#{$size}", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin bokutoh_l {
+// 	font-family: "FOT-ロダン墨東 Pro L", "RodinBokutohPro-L", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin bokutoh_m {
+// 	font-family: "FOT-ロダン墨東 Pro M", "RodinBokutohPro-M", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin bokutoh_db {
+// 	font-family: "FOT-ロダン墨東 Pro DB", "RodinBokutohPro-DB", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin bokutoh_b {
+// 	font-family: "FOT-ロダン墨東 Pro B", "RodinBokutohPro-B", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin bokutoh_eb {
+// 	font-family: "FOT-ロダン墨東 Pro EB", "RodinBokutohPro-EB", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin bokutoh_ub {
+// 	font-family: "FOT-ロダン墨東 Pro UB", "RodinBokutohPro-UB", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin gillsans_bold {
+// 	font-family: "GillSansMTPro-Bold", "Gill Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin tsukumarugo_d {
+// 	font-family: "FOT-筑紫A丸ゴシック Std D", TsukuARdGothicStd-D, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin tsukumarugo_b {
+// 	font-family: "FOT-筑紫A丸ゴシック Std B", TsukuARdGothicStd-B, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin tsukumarugo_m {
+// 	font-family: "FOT-筑紫A丸ゴシック Std M", TsukuARdGothicStd-M, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin fot_l($size: 'L') {
+// 	font-family: "FOT-UD角ゴ_ラージ Pr6 #{$size}", "UDKakugo_LargePr6-#{$size}", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_s_l {
+// 	font-family: "FOT-UD角ゴ_スモール Pr6 L", "UDKakugo_SmallPr6-L", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_s_r {
+// 	font-family: "FOT-UD角ゴ_スモール Pr6 R", "UDKakugo_SmallPr6-R", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_s_m {
+// 	font-family: "FOT-UD角ゴ_スモール Pr6 M", "UDKakugo_SmallPr6-M", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_s_db {
+// 	font-family: "FOT-UD角ゴ_スモール Pr6 DB", "UDKakugo_SmallPr6-DB", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_s_b {
+// 	font-family: "FOT-UD角ゴ_スモール Pr6 B", "UDKakugo_SmallPr6-B", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin fot_cezanne_m {
+// 	font-family: "FOT-セザンヌ Pro M", "CezannePro-M", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_cezanne_db {
+// 	font-family: "FOT-セザンヌ Pro DB", "CezannePro-DB", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_cezanne_b {
+// 	font-family: "FOT-セザンヌ Pro B", "CezannePro-B", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin fot_cezannepron_m {
+// 	font-family: "FOT-ニューセザンヌ ProN M", "NewCezanneProN-M", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_cezannepron_db {
+// 	font-family: "FOT-ニューセザンヌ ProN DB", "NewCezanneProN-DB", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin fot_cezannepron_b {
+// 	font-family: "FOT-ニューセザンヌ ProN B", "NewCezanneProN-B", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin futura_m {
+// 	font-family: "FuturaLTPro-Medium", futura-pt, "Futura PT", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+// @mixin rodin_b {
+// 	font-family: "FOT-ロダン Pro B", "RodinPro-B", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+//@mixin rodin_db {
+//	font-family: "FOT-ロダン Pro DB", NewRodinPro-DB, Roboto, "ヒラギノ角ゴ Pro W6", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+//	font-weight: normal;
+//}
+// @mixin rodin_m {
+// 	font-family: "FOT-ロダン Pro M", "RodinPro-M", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+// @mixin rodin_l {
+// 	font-family: "FOT-ロダン Pro L", "RodinPro-L", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: normal;
+// }
+
+@mixin notosans {
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: normal;
+}
+
+// @mixin century_gothic-family {
+// 	font-family: "Century Gothic", Verdana, Arial, "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// }
+// @mixin yu_font-family {
+// 	font-family: "游ゴシック", "YuGothic", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// }
+// @mixin sanfrancisco_font-family {
+// 	font-family: "San Francisco", "游ゴシック", "YuGothic", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// }
+// @mixin mincho_yu {
+// 	font-family: "YuMincho", "游明朝", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+// 	font-weight: normal;
+// }
+// @mixin mincho_m {
+// 	font-family: "FOT-筑紫明朝 Pr5 M", "TsukuMinPr5-M", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+// 	font-weight: normal;
+// }
+// @mixin mincho_b {
+// 	font-family: "FOT-筑紫明朝 Pr5 B", "TsukuMinPr5-B", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+// 	font-weight: bold;
+// }
+// @mixin mincho_e {
+// 	font-family: "FOT-筑紫明朝 Pr5 E", "TsukuMinPr5-E", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+// 	font-weight: lighter;
+// }
+// @mixin mincho_h {
+// 	font-family: "FOT-筑紫明朝 Pr5 H", "TsukuMinPr5-HV", "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", "HG明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+// 	font-weight: bold;
+// }
+// @mixin arial_font-family {
+// 	font-family: "Arial", "Roboto", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+// 	font-weight: bold;
+// }

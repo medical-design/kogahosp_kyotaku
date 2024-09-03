@@ -1,0 +1,269 @@
+@function palette($palette-group, $palette-type: "default") {
+	@return map-get(map-get($palettes, $palette-group), $palette-type);
+}
+
+$palettes: (
+	"red": (
+		"default": #000000,
+		"text": #cd5d3b,
+		"alert": #cd5d3b,
+		"bg": #af2b35,
+		"color": #cd5d3b,
+		"border": #000000,
+		"color2": #e95942,
+		"new": #d24d60,
+	),
+	"blue": (
+		"default": #68b3c6,
+		"text": #2a6ba7,
+		"emphasis": #429a84,
+		"color": #102b50,
+		"color2": #095b91,
+		"color3": #185bb1,
+		"color4": #4f75a7,
+		"color5": #465669,
+		"color6": #2066c2,
+		"color7": #4675b2,
+		"color8": #2059a3,
+		"tell1": #4a68da,
+		"tell2": #3287c2,
+		"bg": #124a51,
+		"bg2": #eaf3ff,
+		"bg3": #0a3469,
+		"bg4": #f6f8fa,
+		"link": #00469f,
+		"midashi": #002e7d,
+		"border": #b5cdef,
+		"border2": #cfdbe9,
+		"question": #548cd3,
+		"pagelink_bg": #f7f9fa,
+	),
+	"pink": (
+		"default": #ed8a8a,
+	),
+	"yellow": (
+		"default": #ebac25,
+	),
+	"orange": (
+		"default": #ed8767,
+		"bg": #f4997c,
+	),
+	"green": (
+		"default": #429a84,
+	),
+	"gray": (
+		"default": #ff0000,
+	),
+	"brown": (
+		"default": #000000,
+	),
+	"marker": (
+		"default": #000000,
+	),
+
+	"border": (
+		"default": #7da1cd,
+		"1": #ccd3dc,
+		"2": #e6e6e6,
+	),
+	"cream": (
+		"default": #f8f3e4,
+	),
+
+	"li": (
+		"ul": #4a9fae,
+		"ol": #4a9fae,
+	),
+
+	"news": (
+		"news": (
+			"color": #215fad,
+		),
+		"important": (
+			"color": #c33a3a,
+		),
+		"patient": (
+			"color": #215fad,
+		),
+		"comedical": (
+			"color": #d08b29,
+		),
+		"recruit": (
+			"color": #219429,
+		),
+	),
+
+	"color": (
+		"default": #4d4741,
+		"p": #4d4741,
+		"midashi": #4d4741,
+		"caption": #444444,
+		"default_bg": #ffffff,
+		"placeholder": #999999,
+		"breadcrumbs": #3d59a0,
+		"outline": #a6a6a6,
+		"hover_bg": #2c2c96,
+		"accent": #ff950b,
+		"accent2": #ffaa00,
+		"h3": #4d4741,
+		"h4": #4d4741,
+		"h5": #ed8767,
+		//"h6": #4e862c,
+	),
+	"link": (
+		"default": #ed8767,
+		"hover": #ed8767,
+	),
+	"button": (
+		"default": #ed8767,
+		"blue": #68b3c6,
+		"pink": #ed8a8a,
+		"yellow": #ebac25,
+		"hover": #ffffff,
+		"bg": #fdf5f2,
+		"hover_bg": #f5a48a,
+		"border": #ffffff,
+	),
+	"table": (
+		"border": #d4d2d0,
+		"thead_th_color": #47413a,
+		"thead_th_bg": #ebebea,
+		"tbody_th_color": #47413a,
+		"tbody_th_bg": #f6f6f5,
+		"tbody_td_color": #47413a,
+		"tbody_td_bg": #ffffff,
+	),
+	"box": (
+		"bg": #ffffff,
+		"border": #748296,
+		"bg_orange": #fff4e2,
+		"border_orange": #d24d60,
+		"contact_border": #d1d8ee,
+		"contact_bg": #62927c,
+	),
+);
+
+$pc_padding: 50px;
+$sp_padding: 30px;
+
+$pc_container_width_lg: 1400px + $pc_padding * 2;
+$pc_container_width: 1260px;
+// $pc_container_width_sm: 800px;
+// $pc_container_width_lg: 1920px;
+// $pc_container_width_lg2: 1440px;
+$pc_contnet_width: 880px;
+$pc_header_height: 100px;
+$pc_header_height_fixed: 100px;
+$sp_header_height: 60px;
+
+$border_radius: 5px;
+$image_radius: 15px;
+
+$scroll_to_top_width: 60px;
+$scroll_to_top_height: 60px;
+
+// $sp_set_image_max_width: 410px;
+
+// $pc_main_content_width: 720px;
+
+// $pc_max: "screen and (min-width: 1900px), print";
+// $pc_l1: "screen and (min-width: 1500px) and (max-width: 1899px), print";
+// $pc_l2: "screen and (min-width: 1380px) and (max-width: 1499px), print";
+// $pc_l3: "screen and (min-width: 1150px) and (max-width: 1379px), print";
+// $pc_l4: "screen and (min-width: 1000px) and (max-width: 1149px), print";
+
+// $pc_1440: "screen and (min-width: 1440px), print";
+// $pc_1439: "screen and (min-width: 1000px) and (max-width: 1439px), print";
+
+$pc: "screen and (min-width: 1000px), print";
+$sp: "screen and (max-width: 999px)";
+
+$ipc: "screen and (min-width: 768px)";
+$isp: "screen and (max-width: 767px)";
+
+$lg1600: "screen and (max-width: 1600px)";
+$lg2: "screen and (max-width: 1439px)";
+$lg1260: "screen and (max-width: 1259px)";
+$lg: "screen and (max-width: 1199px)";
+$md: "screen and (max-width: 991px)";
+$md2: "screen and (max-width: 825px)";
+$sm: "screen and (max-width: 767px)";
+$xs: "screen and (max-width: 575px)";
+$xs2: "screen and (max-width: 420px)";
+$xs3: "screen and (max-width: 374px)";
+$xs4: "screen and (max-width: 320px)";
+
+$lg_gt: "screen and (min-width: 1200px), print";
+$lg_pc: "screen and (max-width: 1199px) and (min-width: 1000px)";
+$sp_isp: "screen and (max-width: 999px) and (min-width: 768px)";
+$sp_xs: "screen and (max-width: 999px) and (min-width: 576px)";
+$sp_xs3: "screen and (max-width: 999px) and (min-width: 375px)";
+
+$fontsize8: 0.6rem;
+$fontsize9: 0.563rem;
+$fontsize10: 0.625rem;
+$fontsize11: 0.688rem;
+$fontsize12: 0.75rem;
+$fontsize13: 0.813rem;
+$fontsize14: 0.875rem;
+$fontsize15: 0.938rem;
+$fontsize16: 1rem;
+$fontsize17: 1.063rem;
+$fontsize18: 1.125rem;
+$fontsize19: 1.188rem;
+$fontsize20: 1.25rem;
+$fontsize21: 1.313rem;
+$fontsize22: 1.375rem;
+$fontsize23: 1.438rem;
+$fontsize24: 1.5rem;
+$fontsize25: 1.563rem;
+$fontsize26: 1.625rem;
+$fontsize27: 1.688rem;
+$fontsize28: 1.75rem;
+$fontsize29: 1.813rem;
+$fontsize30: 1.875rem;
+$fontsize31: 1.938rem;
+$fontsize32: 2rem;
+$fontsize33: 2.063rem;
+$fontsize34: 2.125rem;
+$fontsize35: 2.188rem;
+$fontsize36: 2.25rem;
+$fontsize38: 2.375rem;
+$fontsize42: 2.625rem;
+$fontsize48: 3rem;
+$fontsize58: 3.625rem;
+$fontsize60: 3.75rem;
+$fontsize80: 5rem;
+
+$pc_default_font_size: 1em;
+$sp_default_font_size: 1em;
+
+$pc_default_line_height: 2;
+$sp_default_line_height: 2;
+
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$easeInOutSine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$easeInOutQuad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);

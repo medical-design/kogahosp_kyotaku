@@ -1,0 +1,1 @@
+<?php include DIR_SITE_INCLUDE . 'analytics_body.php'; ?>

@@ -1,0 +1,90 @@
+@use "import/var";
+
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+/* Mobile */
+table.responsive {
+	margin-bottom: 0;
+}
+
+div.table-wrapper thead td {
+	width: auto;
+}
+
+.pinned {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #fff;
+	width: 35%;
+	overflow: hidden;
+	overflow-x: hidden;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	z-index: 2;
+}
+.pinned table {
+	border-right: none;
+	border-left: none;
+	width: 100%;
+}
+.pinned table th,
+.pinned table td {
+	white-space: nowrap;
+}
+.pinned td:last-child {
+	border-bottom: 0;
+}
+
+div.table-wrapper {
+	position: relative;
+	margin-bottom: 20px;
+	overflow: hidden;
+	border-right: 1px solid #ccc;
+}
+div.table-wrapper div.scrollable {
+	margin-left: 35%;
+	z-index: 1;
+}
+div.table-wrapper div.scrollable {
+	overflow: scroll;
+	overflow-y: hidden;
+}
+
+table.responsive td,
+table.responsive th {
+	// position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/*table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }*/
+
+.table-wrapper .pinned {
+	width: 111px;
+	border-left: 0 none;
+	border-right: 0 none;
+	padding-bottom: 5px;
+}
+
+div.table-wrapper tr {
+	box-sizing: border-box;
+}
+div.table-wrapper div.scrollable {
+	padding-left: 110px;
+	margin-left: 0;
+	box-sizing: border-box;
+	/*width: 700px;*/
+}

@@ -1,0 +1,419 @@
+@use "import/var";
+@use "import/mixin_common";
+@use "import/mixin_project";
+@use "import/animation";
+
+/***********************************************************************
+ ***********************************************************************
+ ***********************************************************************
+## Layout
+*/
+
+.root {
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+@mixin container($width: var.$pc_container_width) {
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: var.$pc_padding;
+	padding-right: var.$pc_padding;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $width;
+}
+
+.pc_container,
+.ipc_container,
+.pc_tb_container,
+.container {
+	@include container;
+
+	box-sizing: border-box;
+
+	&._relative {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	&._md {
+		@include container(1000px + var.$pc_padding * 2);
+	}
+
+	&._sm {
+		@include container(600px);
+	}
+
+	&._sm2 {
+		@include container(300px);
+	}
+}
+
+.pc_padding,
+.padding {
+	padding-left: var.$pc_padding;
+	padding-right: var.$pc_padding;
+}
+
+.main_flex_area {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+
+	> * {
+		min-width: 0;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	&._department_detail {
+		padding-top: 20px;
+	}
+}
+
+.main_column {
+	order: 1;
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 60px;
+
+	@media #{var.$lg} {
+		padding-left: 30px;
+	}
+}
+
+.sub_column {
+	order: 2;
+	width: 280px;
+	flex-shrink: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.main_content {
+	font-size: var.$pc_default_font_size;
+	margin-bottom: 120px;
+	//padding-bottom: 80px;
+}
+
+/***********************************************************************
+ ***********************************************************************
+ ***********************************************************************
+
+## Utility - Cosmetic
+
+ユーティリティー設定。
+このサイト専用というわけでもない共通設定。
+
+*/
+.pc_none,
+.root .pc_none {
+	display: none;
+}
+
+.block,
+.pc_block,
+.ipc_block {
+	display: block;
+}
+
+.xs_block {
+	display: none;
+}
+
+@media screen and (width >= 1200px), print {
+	.lg_block {
+		display: block;
+	}
+}
+
+@media screen and (width >= 1000px) and (width <= 1099px), print {
+	.pc_s_block {
+		display: block;
+	}
+}
+
+.tel_link,
+.tel_link-no {
+	pointer-events: none;
+	cursor: default;
+	color: inherit;
+
+	.root &,
+	.root &:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.sp_click,
+.pc_no_click {
+	pointer-events: none;
+	cursor: default;
+}
+
+/***********************************************************************
+ ***********************************************************************
+ ***********************************************************************
+
+
+
+## Component - Base
+
+コンポーネント設定。
+各ページでよく使い回す記述。
+このサイト専用の共通設定。
+
+*/
+
+/**************************
+
+## - 段組設定 2列 3列 4列
+
+PCの時だけ、中央に等間隔で余白を作り、width: 100%; を守って列になる。
+ul でなくてもいい。
+
+**2列 .pc_column2**
+
+	<ul class="pc_column2">
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+	</ul>
+
+**3列 .pc_column3**
+
+	<ul class="pc_column3">
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+	</ul>
+
+**4列 .pc_column4**
+
+	<ul class="pc_column4">
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+	</ul>
+
+*/
+
+.pc_column2 {
+	@include mixin_common.columns(2, 20px);
+}
+
+.pc_column3 {
+	@include mixin_common.columns(3, 20px);
+}
+
+.pc_column4 {
+	@include mixin_common.columns(4, 20px);
+}
+
+.pc_column2b {
+	@include mixin_common.columnsb(2, 30px);
+}
+
+.pc_column3b {
+	@include mixin_common.columnsb(3, 20px);
+}
+
+.pc_column4b {
+	@include mixin_common.columnsb(4, 20px);
+}
+
+.pc_column2,
+.pc_column3,
+.pc_column4 {
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		vertical-align: bottom;
+	}
+}
+
+.set {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	> * {
+		flex-grow: 5;
+
+		&:not(.fix) {
+			margin-top: -10px;
+		}
+	}
+
+	> .left {
+		order: 1;
+	}
+
+	> .right {
+		order: 2;
+	}
+
+	> .fix {
+		flex-shrink: 0;
+		flex-grow: 0;
+		width: 100%;
+	}
+
+	> .flex {
+		display: flex;
+	}
+}
+
+/***********************************************************************
+ ***********************************************************************
+ ***********************************************************************
+
+## Project
+
+特定ページ専用、効果範囲が限定的な記述。
+コンテンツ内容に密接で、汎用性がなく、機能の付け替えを想定していない。
+
+*/
+
+body {
+	&._fixed {
+		overflow: hidden;
+	}
+}
+
+.header_container {
+}
+
+.header {
+	&__inner {
+		height: 80px;
+
+		.close_btn,
+		.open_btn {
+			display: none;
+		}
+	}
+
+	&__l {
+	}
+
+	&__r {
+		display: flex;
+		align-items: center;
+		column-gap: 30px;
+
+		@media #{var.$lg} {
+			column-gap: 20px;
+		}
+	}
+
+	.gnav {
+		&__ul {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			column-gap: 28px;
+
+			@media #{var.$lg} {
+				column-gap: 15px;
+			}
+		}
+
+		&__a {
+			&:hover {
+				.gnav__text {
+					&::after {
+						transform: translateX(-50%) scale(1);
+					}
+				}
+			}
+		}
+
+		&__text {
+			color: var.palette("color");
+			font-size: var.$fontsize18;
+			letter-spacing: 0.1em;
+			position: relative;
+
+			@media #{var.$lg} {
+				font-size: var.$fontsize16;
+			}
+
+			&::after {
+				content: "";
+				display: inline-block;
+				width: 100%;
+				height: 1px;
+				background-color: var.palette("color");
+				position: absolute;
+				bottom: -5px;
+				left: 50%;
+				transform: translateX(-50%) scale(0, 1);
+				transform-origin: center top;
+				transition: transform var.$easeInOutCubic 0.3s;
+			}
+		}
+	}
+
+	.contact_btn {
+		a {
+			width: 188px;
+			display: block;
+			background-color: var.palette("button", "default");
+			border-radius: 20px;
+			padding: 6px 10px;
+			text-align: center;
+			box-sizing: border-box;
+			border: 1px solid transparent;
+			transition: background-color 0.2s;
+
+			&:hover {
+				background-color: #ffffffff;
+				border: 1px solid var.palette("button", "default");
+
+				.text {
+					color: var.palette("button", "default");
+
+					&::before {
+						background-position-y: -16px;
+					}
+				}
+			}
+
+			.text {
+				color: #ffffff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: bold;
+				letter-spacing: 0.1em;
+
+				&::before {
+					content: "";
+					display: inline-block;
+					background: url("../img/icon/mail_white.webp") 0 0 no-repeat transparent;
+					background-size: 23px 31px;
+					width: 23px;
+					height: 16px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}

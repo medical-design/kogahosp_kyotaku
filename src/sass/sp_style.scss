@@ -1,0 +1,517 @@
+@use "import/var";
+@use "import/mixin_common";
+@use "import/mixin_compass";
+
+select,
+input {
+	font-size: 1em;
+}
+
+.text_frame input,
+.textarea_frame textarea {
+	font-size: 1em;
+}
+
+body {
+	font-size: var.$sp_default_font_size;
+	line-height: 1.5;
+}
+
+/***********************************************************************
+ ***********************************************************************
+ ***********************************************************************
+## Layout
+*/
+
+.root {
+	overflow: hidden;
+	padding-top: 0;
+	//padding-top: var.$sp_header_height;
+}
+
+.wrapper {
+	width: 100%;
+	min-width: 100%;
+}
+
+@mixin container {
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var.$sp_padding;
+	padding-right: var.$sp_padding;
+	// overflow: hidden;
+
+	@media #{var.$xs} {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	@media #{var.$xs2} {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.sp_container,
+.mb_container,
+.container {
+	@include container;
+
+	&-nopadding {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media #{var.$ipc} {
+	.ipc_container {
+		@include container;
+	}
+}
+
+@media #{var.$isp} {
+	.isp_container {
+		@include container;
+	}
+}
+
+.sp_padding,
+.padding {
+	padding-left: var.$sp_padding;
+	padding-right: var.$sp_padding;
+}
+
+// .main_column {
+// 	margin-bottom: 30px;
+// }
+
+.main_content {
+	img {
+		display: block;
+	}
+}
+
+.sub_column {
+	display: none;
+	// @include mixin_common.sp_unindent;
+	// margin-bottom: 100px;
+}
+
+.scroll_to_top {
+	// right: var.$sp_padding;
+	right: 0;
+}
+
+.sp_unindent {
+	@include mixin_common.sp_unindent;
+}
+
+.sp_cell + .sp_cell {
+	margin-left: 1em;
+}
+
+/***********************************************************************
+ ***********************************************************************
+ ***********************************************************************
+
+## Utility - Cosmetic
+
+ユーティリティー設定。
+このサイト専用というわけでもない共通設定。
+
+<div class="_h3">.sp</div>
+PCの時だけ表示される。
+
+<div class="_h3">.sp_block</div>
+SPの時だけ、ブロック要素になる。
+
+<div class="_h3">.tel_link</div>
+SPの時だけ、リンクになる。(クリックで電話するリンク)
+
+*/
+.sp_none,
+.root .sp_none {
+	display: none;
+}
+
+.block,
+.sp_block {
+	display: block;
+}
+
+.xs_block {
+	display: none;
+}
+
+@media #{var.$xs} {
+	.xs_none {
+		display: none;
+	}
+
+	.xs_block {
+		display: block;
+	}
+}
+
+@media #{var.$ipc} {
+	.ipc_block {
+		display: block;
+	}
+}
+
+@media #{var.$isp} {
+	.isp_block {
+		display: block;
+	}
+
+	.ipc_block {
+		+ .ipc_block {
+			margin-left: 0.7em;
+		}
+	}
+}
+
+.sp_click {
+	cursor: pointer;
+}
+
+.scell {
+	display: block;
+	margin-right: 0;
+}
+
+.tel_link {
+	// .root &,
+	// .root &:hover {
+	// 	text-decoration: underline;
+	// 	color: var.palette('link');
+	// }
+	&-no {
+		text-decoration: none;
+		pointer-events: none;
+		color: inherit;
+	}
+}
+
+/***********************************************************************
+ ***********************************************************************
+ ***********************************************************************
+
+## Component - Base
+
+コンポーネント設定。
+各ページでよく使い回す記述。
+このサイト専用の共通設定。
+
+*/
+
+/**************************
+
+## - 段組設定 2列 3列 4列
+
+SPの時だけ、中央に等間隔で余白を作り、width: 100%; を守って列になる。
+ul でなくてもいい。
+
+**2列 .sp_column2**
+
+	<ul class="sp_column2">
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+	</ul>
+
+**3列 .sp_column3**
+
+	<ul class="sp_column3">
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+	</ul>
+
+**4列 .sp_column4**
+
+	<ul class="sp_column4">
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+		<li>コンテンツ</li>
+	</ul>
+
+*/
+.sp_column2 {
+	@include mixin_common.columns(2, 10px);
+}
+
+.sp_column3 {
+	@include mixin_common.columns(3, 10px);
+}
+
+.sp_column4 {
+	@include mixin_common.columns(4, 10px);
+}
+
+.sp_column2,
+.sp_column3,
+.sp_column4 {
+	img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.pc_column2,
+.pc_column3,
+.pc_column4 {
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		vertical-align: bottom;
+	}
+}
+
+/**************************
+.pc_column
+*/
+
+.pc_column2:not(.sp_column2, .sp_column3, .sp_column4) {
+	> *:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+.pc_column3:not(.sp_column2, .sp_column3, .sp_column4) {
+	> *:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+.pc_column4:not(.sp_column2, .sp_column3, .sp_column4) {
+	> *:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+.pc_column2b:not(.sp_column2, .sp_column3, .sp_column4) {
+	> *:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+.pc_column3b:not(.sp_column2, .sp_column3, .sp_column4) {
+	> *:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+.pc_column4b:not(.sp_column2, .sp_column3, .sp_column4) {
+	> *:not(:last-child) {
+		margin-bottom: 1em;
+	}
+}
+
+/**************************
+	.table-column2
+*/
+.table {
+	&-column2 {
+		// display: block;
+		width: 100% !important;
+		max-width: 100% !important;
+
+		thead,
+		tbody,
+		tfoot,
+		tr,
+		th,
+		td {
+			display: block;
+			box-sizing: border-box;
+			float: left;
+			clear: both;
+
+			.root & {
+				width: 100%;
+			}
+		}
+
+		tr th,
+		th + td {
+			border-top: 0 none;
+		}
+
+		thead,
+		tbody {
+			th,
+			td {
+				width: 100% !important;
+				// border-left: 0 none;
+				// border-right: 0 none;
+			}
+
+			td + td {
+				border-top: 0 none;
+			}
+		}
+	}
+
+	&.table-column2 {
+		&:not(.table-noborder) {
+			tr:first-child {
+				th:first-child,
+				td:first-child {
+					border-top: 1px solid var.palette("table", "border");
+				}
+			}
+		}
+	}
+}
+
+/* form */
+.input_frame.node,
+.input_frame.node input {
+	width: 60px;
+	display: inline-block;
+}
+
+.input_frame.node2,
+.input_frame.node2 input {
+	width: 70px;
+}
+
+form .frame .node {
+	margin-right: 3px;
+}
+
+.sp_center {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+
+	.img {
+		display: inline-block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.footer {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+/***********************************************************************
+ ***********************************************************************
+ ***********************************************************************
+
+## Project
+
+特定ページ専用、効果範囲が限定的な記述。
+コンテンツ内容に密接で、汎用性がなく、機能の付け替えを想定していない。
+
+*/
+
+.open_btn {
+	@include mixin_compass.hide-text;
+	//@include mixin_common.on_opacity;
+
+	margin: 0;
+	width: 30px;
+	height: 30px;
+	display: block;
+	position: fixed;
+	right: 15px;
+	//box-sizing: border-box;
+	//z-index: 2;
+
+	//&::before {
+	//	@include mixin_common.bg-block("../img/sp/menu_open.webp", 25px, 20px);
+	//}
+
+	.hamburger_btn {
+		//margin: 0;
+		//width: 25px;
+		//height: 20px;
+		//display: block;
+		//position: fixed;
+		//right: 0;
+		//box-sizing: border-box;
+		//z-index: 2;
+		//background-color: pink;
+		//background-color: #000000;
+
+		&__inner {
+			display: block;
+			box-sizing: border-box;
+			position: relative;
+			width: 30px;
+			height: 30px;
+			//left: 13px;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: top 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+			//background-color: #000000;
+
+			> span {
+				display: block;
+				height: 2px;
+				width: 30px;
+				border-radius: 1px;
+				background-color: var.palette("orange", "default");
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				transition: top 0.3s cubic-bezier(0.23, 1, 0.32, 1), transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+				&:nth-child(1) {
+					top: 5px;
+				}
+
+				&:nth-child(2) {
+					top: 15px;
+				}
+
+				&:nth-child(3) {
+					top: 25px;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+.close_btn {
+	@include mixin_compass.hide-text;
+	//@include mixin_common.on_opacity;
+
+	margin: 0;
+	width: 24px;
+	height: 24px;
+	position: fixed;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	box-sizing: border-box;
+	z-index: 2;
+	display: none;
+
+	&::before {
+		@include mixin_common.bg-block("../img/sp/menu_close.webp", 24px, 24px);
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+}

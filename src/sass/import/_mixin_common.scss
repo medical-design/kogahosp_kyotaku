@@ -1,0 +1,382 @@
+/* stylelint-disable at-rule-empty-line-before */
+@use "sass:math";
+@use "var";
+
+@mixin bg-inline($url, $width, $height) {
+	content: "";
+	display: inline-block;
+	background: url($url) 0 center no-repeat transparent;
+	background-size: $width $height;
+	width: $width;
+	height: $height;
+}
+
+@mixin bg-block($url, $width, $height) {
+	content: "";
+	display: block;
+	background: url($url) 0 0 no-repeat transparent;
+	background-size: $width $height;
+	width: $width;
+	height: $height;
+}
+
+@mixin bg($url, $width, $height) {
+	background: url($url) 0 0 no-repeat transparent;
+	background-size: $width $height;
+	width: $width;
+	height: $height;
+}
+
+// @font-face {
+// 	font-family: 'San Francisco';
+// 	font-weight: 400;
+// 	src: url("../font/sanfranciscodisplay-regular-webfont.woff");
+// }
+
+@mixin button_hover {
+	color: $button_color_hover;
+	background-color: $button_color_bg_hover;
+	transition: background-color 0.2s ease-out;
+}
+
+@mixin vertical-align-middle($is_center: false) {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@if ($is_center == true) {
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+	}
+}
+
+@mixin columns_fix($width, $float: left) {
+	width: $width;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	float: $float;
+}
+
+@mixin columns_flex($width, $float: left, $padding: 0) {
+	width: 100%;
+	box-sizing: border-box;
+	float: $float;
+
+	@if $float == left {
+		padding-right: $width + $padding;
+		margin-right: $width * -1;
+	} @else if $float == right {
+		padding-left: $width + $padding;
+		margin-left: $width * -1;
+	}
+}
+
+@mixin columns($column, $padding: 20px) {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: math.div($padding, 2) * -1;
+	margin-right: math.div($padding, 2) * -1;
+	margin-bottom: $padding * -1;
+	width: calc(100% + #{$padding});
+
+	> * {
+		padding-left: math.div($padding, 2);
+		padding-right: math.div($padding, 2);
+		box-sizing: border-box;
+		width: floor-decimal(math.div(100%, $column), 2);
+		// flex-basis: floor(100% / $column);
+		// flex-shrink: 0;
+		// flex-grow: 0;
+		margin-bottom: $padding;
+	}
+
+	// @include clearfix;
+	// > * {
+	// 	@if $max_width != null {
+	// 		width: round(($max_width - ($padding * ($column - 1))) / $column);
+	// 	} @else {
+	// 		width: 100% / $column;
+	// 	}
+	// 	float: left;
+	// 	box-sizing: border-box;
+	// }
+	// @for $i from 1 through ($column) {
+	// 	$ii: $column - $i;
+	// 	@if ($column != $i) {
+	// 		> *:nth-child(#{$column}n + #{$i}) {
+	// 			@if ($i == 1) {
+	// 				clear: left;
+	// 				padding-right: round($padding / $column * $ii);
+	// 			} @else {
+	// 				padding-left: round($padding / $column * ($i - 1));
+	// 				padding-right: round($padding / $column * $ii);
+	// 			}
+	// 		}
+	// 	} @else {
+	// 		> *:nth-child(#{$column}n) {
+	// 			padding-left: round($padding / $column * ($i - 1));
+	// 		}
+	// 	}
+	// }
+}
+
+@mixin columnsb($column, $padding: 20px, $max_width: null) {
+	@include clearfix;
+
+	> * {
+		@if $max_width != null {
+			width: math.div(floor(($max_width - ($padding * ($column - 1))), $column));
+		} @else {
+			width: math.div(100%, $column);
+		}
+
+		float: left;
+		box-sizing: border-box;
+	}
+
+	@for $i from 1 through ($column) {
+		$ii: $column - $i;
+
+		@if ($column != $i) {
+			> *:nth-child(#{$column}n + #{$i}) {
+				@if ($i == 1) {
+					clear: left;
+					padding-right: floor(math.div($padding, $column) * $ii);
+				} @else {
+					padding-left: floor(math.div($padding, $column) * ($i - 1));
+					padding-right: floor(math.div($padding, $column) * $ii);
+				}
+			}
+		} @else {
+			> *:nth-child(#{$column}n) {
+				padding-left: floor(math.div($padding, $column) * ($i - 1));
+			}
+		}
+	}
+}
+
+@mixin flex_columns($column, $width, $padding, $is_cancel: false) {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	> * {
+		width: $width;
+		margin-right: $padding;
+
+		@if $is_cancel {
+			padding-left: 0;
+			padding-right: 0;
+			float: none;
+		}
+
+		&:nth-child(#{$column}n) {
+			margin-right: 0;
+		}
+	}
+}
+
+/* simple clearfix */
+%clearfix {
+	&::before,
+	&::after {
+		content: "";
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+@mixin clearfix {
+	&::before,
+	&::after {
+		content: "";
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+@mixin on_opacity {
+	&:hover {
+		text-decoration: none;
+		opacity: 0.7;
+		transition: 0.2s opacity;
+	}
+}
+
+@mixin default_image($width: 100%) {
+	// border-radius: $border_radius;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $width;
+}
+
+@mixin set($width, $padding) {
+	.resize.right {
+		@include columns_flex($width, right, $padding);
+	}
+
+	.fix.left {
+		@include columns_fix($width, left);
+	}
+
+	.resize.left {
+		@include columns_flex($width, left, $padding);
+	}
+
+	.fix.right {
+		@include columns_fix($width, right);
+	}
+
+	.fix,
+	.resize {
+		> img:not(.cancel) {
+			@include default_image($width);
+		}
+	}
+}
+
+@mixin default_scroll_anime($delay: 0s) {
+	transition: all 1.4s var.$easeOutExpo $delay;
+
+	&.init {
+		opacity: 0;
+		transform: translateY(-5%);
+	}
+}
+
+@mixin cancel() {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	width: inherit;
+	height: inherit;
+	border: 0 none;
+	color: inherit;
+	vertical-align: baseline;
+	text-align: inherit;
+	font-size: inherit;
+	font-weight: normal;
+	line-height: inherit;
+	overflow: visible;
+	border-radius: 0;
+	position: static;
+	left: auto;
+	top: auto;
+	clear: inherit;
+	content: normal;
+	min-height: initial;
+	max-height: initial;
+	float: none;
+	transform: none;
+	background: none center center / center center repeat-none transparent;
+	box-sizing: content-box;
+}
+
+@mixin cancel_all() {
+	@include cancel;
+
+	&::before,
+	&::after {
+		@include cancel;
+	}
+}
+
+@mixin cancel_list() {
+	.main_content & {
+		padding-left: 0;
+
+		li {
+			margin-bottom: 0;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+@mixin width_100vw {
+	width: 100vw;
+	max-width: none;
+	min-width: 0;
+	position: relative;
+	top: 0;
+	left: -50vw;
+	right: -50vw;
+	margin-right: calc(50%);
+	margin-left: calc(50%);
+	// margin-right: calc(50% - 50vw);
+	// margin-left: calc(50% - 50vw);
+}
+
+@mixin sp_unindent {
+	margin-left: -1 * var.$sp_padding;
+	margin-right: -1 * var.$sp_padding;
+	// width: 100vw;
+}
+
+@mixin pc_unindent {
+	margin-left: -1 * var.$pc_padding;
+	margin-right: -1 * var.$pc_padding;
+}
+
+// https://terkel.jp/archives/2012/12/decimal-digits-and-rounding-sass-function/
+// Round (四捨五入)
+@function round-decimal($number, $digits: 0) {
+	@return to-fixed($number, $digits, "round");
+}
+
+// Ceil (切り上げ)
+@function ceil-decimal($number, $digits: 0) {
+	@return to-fixed($number, $digits, "ceil");
+}
+
+// Floor (切り捨て)
+@function floor-decimal($number, $digits: 0) {
+	@return to-fixed($number, $digits, "floor");
+}
+
+@function to-fixed($number, $digits: 0, $round: "round") {
+	$n: 1;
+	// $number must be a number
+	@if type-of($number) != number {
+		@warn '#{ $number } is not a number.';
+
+		@return $number;
+	}
+	// $digits must be a unitless number
+	@if type-of($digits) != number {
+		@warn '#{ $digits } is not a number.';
+
+		@return $number;
+	} @else if not unitless($digits) {
+		@warn '#{ $digits } has a unit.';
+
+		@return $number;
+	}
+
+	@for $i from 1 through $digits {
+		$n: $n * 10;
+	}
+
+	@if $round == "round" {
+		@return math.div(round($number * $n), $n);
+	} @else if $round == "ceil" {
+		@return math.div(ceil($number * $n), $n);
+	} @else if $round == "floor" {
+		@return math.div(floor($number * $n), $n);
+	} @else {
+		@warn '#{ $round } is undefined keyword.';
+
+		@return $number;
+	}
+}
