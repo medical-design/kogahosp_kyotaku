@@ -31,188 +31,258 @@
 					</div>
 				</div>
 
-				<div class="inews">
-					<div class="container">
-						<div class="news_area">
-							<div class="common_title news_title">
-								<div class="title_box">
-									<span class="title _en">news</span>
-									<span class="title _ja">
-										<img src="/common/img/top/title/news.webp" alt="お知らせ" loading="lazy" width="152" height="35">
-									</span>
-								</div>
-								<div class="btn_box">
-									<a class="common_btn" href="/news/">一覧へ</a>
-								</div>
+				<div class="pagelink_area" id="js-anchor_link">
+					<ul class="pagelink_list cancel">
+						<li class="pagelink"><a href="#section1"><span>居宅介護<br>支援事業とは</span></a></li>
+						<li class="pagelink"><a href="#section2"><span>新規御相談</span></a></li>
+						<li class="pagelink"><a href="#section3"><span>業務内容</span></a></li>
+						<li class="pagelink"><a href="#section4"><span>介護保険内<br>サービス</span></a></li>
+						<li class="pagelink"><a href="#section5"><span>施設情報</span></a></li>
+						<li class="pagelink"><a href="https://www.kogahosp.jp/recruit/shiki/" target="_blank"><span>お問い合わせ</span></a></li>
+					</ul>
+				</div>
+				<div class="igreeting" id="section1">
+					<div class="greeting_container">
+						<div class="common_title greeting_title">
+							<div class="title_box">
+								<h2 class="title">
+									ごあいさつ
+								</h2>
 							</div>
-							<ul class="newsline_list">
-
-									<p>お知らせはありません。</p>
-							</ul>
 						</div>
+						<div class="text_box">
+							<div class="administrator_name">
+								<span>医療法人徳洲会</span>
+								<span>古河総合病院居宅介護支援事業所　管理者</span>
+							</div>
+							<div class="greeting_desc">
+								<p>私たちは、医療法人徳洲会 古河総合病院の居宅介護支援事業所として、医療やリハビリなどの専門職と併設された訪問看護・訪問介護・通所リハビリ・小規模多機能ケアとの連携が強く、情報共有もスムーズに行えます。そのため速やかに介護サービスに繋げることができる利点があります。</p>
+								<p>利用者様の意向に沿ったサービスを丁寧に説明し、その生活を支えていくために職員一同日々向上に努めてまいります。</p>
+							</div>
+						</div>
+						<div class="deco _01"><img src="/common/img/top/deco/leaf_deco.webp" alt=""></div>
+						<div class="deco _02"><img src="/common/img/top/deco/leaf_deco.webp" alt=""></div>
 					</div>
 				</div>
 				<div class="iabout">
-					<div class="container">
-						<div class="about_area">
-							<div class="img_box">
-								<div class="inner">
-									<img class="image" src="/common/img/top/about/img_01.webp" alt="" loading="lazy" width="540" height="438">
-									<img class="deco _01" src="/common/img/top/illust/01.webp" alt="" loading="lazy" width="215" height="135">
-								</div>
-							</div>
-							<div class="text_box">
-								<div class="common_title">
-									<div class="title_box">
-										<span class="title _en">about</span>
-										<span class="title _ja">
-											<img src="/common/img/top/title/about.webp" alt="" loading="lazy" width="272" height="34">
-										</span>
-									</div>
-								</div>
-								<div class="body">
-									<p>私たちは小規模多機能型居宅介護として「通い」を中心に、ご利用者様の機能や希望に応じて、「訪問」や「泊まり」を組み合わせたサービスを提供し、在宅での生活が継続できるように支援いたします。</p>
-									<div class="btn_box">
-										<a class="common_btn" href="/about/">小規模多機能型居宅介護とは</a>
-									</div>
-								</div>
-								<img class="deco _02 isp_none" src="/common/img/top/illust/02.webp" alt="" loading="lazy" width="275" height="250">
-							</div>
-						</div>
-						<img class="deco _02 ipc_none" src="/common/img/top/illust/02.webp" alt="" loading="lazy" width="275" height="250">
-					</div>
-					<img class="bg" src="/common/img/top/service/bg.webp" alt="" loading="lazy">
+					<div class="about_title"><img src="/common/img/top/about/about_title.webp" alt="居宅介護支援事業とは"></div>
+					<p>居宅介護支援事業所ではケアマネジャーが関係市町村、地域の保険・医療・福祉サービスとの綿密な連携を図り介護保険や介護の相談などを承り総合的な介護サービス提供が受けられるよう調整を行わせていただいております。</p>
 				</div>
-				<div class="iservice">
+
+				<div class="inews">
 					<div class="container">
-						<div class="service_area">
-							<div class="title_wrap">
-								<img class="title_deco" src="/common/img/top/title/deco/01.webp" alt="" loading="lazy" width="70" height="30">
-								<span class="title _ja">
-									<img src="/common/img/top/title/service.webp" alt="サービス" loading="lazy" width="151" height="35">
-								</span>
-								<span class="_en">service</span>
+						<div class="image_wrapper">
+							<img src="/common/img/top/news/news_image.webp" alt="">
+							<div class="deco"><img src="/common/img/top/deco/flower_deco.webp" alt=""></div>
+						</div>
+						<div class="news_area">
+							<div class="common_title news_title">
+								<div class="title_box">
+									<h2>
+										お知らせ
+									</h2>
+								</div>
+
 							</div>
-							<ul class="service_list">
+							<ul class="newsline_list">
 								<li>
-									<div class="inner">
-										<div class="img_box">
-											<img src="/common/img/top/service/img_01.webp" alt="" loading="lazy" width="311" height="170">
+									<a class="newsline" href="https://koga-shiki.md-dev3.com/archives/uncategorized/73">
+										<div class="head">
+											<div class="date">
+												<span class="year">2024</span>.<span class="month">08</span>.<span class="day">01</span>
+											</div>
 										</div>
-										<div class="text_box">
-											<span class="num _pink">01</span>
-											<span class="title"class="title">通いのサービス</span>
-											<p>
-												家庭的な雰囲気で利用者の方がなじみやすく、安心してすごせる環境を作ります。<br>
-												<span class="careful">※1日15名様まで</span>
-											</p>
+										<div class="body">
+											<div class="ex  ">テスト</div>
 										</div>
-									</div>
-									<div class="btn_box">
-										<a class="common_btn _pink" href="/service/#section_01">詳しくはこちら</a>
-									</div>
+									</a>
 								</li>
 								<li>
-									<div class="inner">
-										<div class="img_box">
-											<img src="/common/img/top/service/img_02.webp" alt="" loading="lazy" width="311" height="170">
+									<a class="newsline  " href="https://koga-shiki.md-dev3.com/archives/uncategorized/73">
+										<div class="head">
+											<div class="date">
+												<span class="year">2024</span>.<span class="month">08</span>.<span class="day">01</span>
+											</div>
 										</div>
-										<div class="text_box">
-											<span class="num _blue">02</span>
-											<span class="title">泊まりのサービス</span>
-											<p>
-												家庭的な雰囲気で利用者の方がなじみやすく、安心してすごせる環境を作ります。<br>
-												<span class="careful">※1日9名様まで</span>
-											</p>
+										<div class="body">
+											<div class="ex  ">テスト</div>
 										</div>
-									</div>
-									<div class="btn_box">
-										<a class="common_btn _blue" href="/service/#section_02">詳しくはこちら</a>
-									</div>
-								</li>
-								<li>
-									<div class="inner">
-										<div class="img_box">
-											<img src="/common/img/top/service/img_03.webp" alt="" loading="lazy" width="311" height="170">
-										</div>
-										<div class="text_box">
-											<span class="num _yellow">03</span>
-											<span class="title">訪問介護のサービス</span>
-											<p>
-												ご自宅でお過ごしの時には、見守り、安否確認、身の回りの介護などのためにスタッフがお伺いいたします。<br>
-												お電話での安否確認も行います。
-											</p>
-										</div>
-									</div>
-									<div class="btn_box">
-										<a class="common_btn _yellow" href="/service/#section_03">詳しくはこちら</a>
-									</div>
+									</a>
 								</li>
 							</ul>
+							<div class="btn_box">
+								<a class="common_btn" href="/news/">一覧を見る</a>
+							</div>
 						</div>
-						<img class="deco _01" src="/common/img/top/illust/05.webp" alt="" loading="lazy" width="200" height="216">
-						<img class="deco _02" src="/common/img/top/illust/03.webp" alt="" loading="lazy" width="135" height="162">
 					</div>
-					<div class="bg_bottom">
-						<img class="_01" src="/common/img/top/service/bg_bottom_01.webp" alt="" loading="lazy" width="750" height="375">
-						<img class="_02" src="/common/img/top/service/bg_bottom_02.webp" alt="" loading="lazy" width="1217" height="495">
+				</div>
+				<div class="iconsul">
+					<div class="container">
+						<div class="title_box">
+							<h2>新規御相談</h2>
+						</div>
+						<ul class="consul_list">
+							<li>
+								<div class="num"><span class="small">#</span>01</div>
+								<div class="inner">
+									<div class="icon_box">
+										<div><img src="/common/img/top/consul/consul_icon01.webp" alt=""></div>
+									</div>
+									<div class="text_box">
+										<h3><span>相談</span></h3>
+										<p>古河総合病院居宅介護支援事業所にお電話またはご来所ください。</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="num"><span class="small">#</span>02</div>
+								<div class="inner">
+									<div class="icon_box">
+										<div><img src="/common/img/top/consul/consul_icon02.webp" alt=""></div>
+									</div>
+									<div class="text_box">
+										<h3><span>申請の代行</span></h3>
+										<p>介護保険の申請を行なっていない場合は申請の代行をさせていただきます。</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="num"><span class="small">#</span>03</div>
+								<div class="inner">
+									<div class="icon_box">
+										<div><img src="/common/img/top/consul/consul_icon03.webp" alt=""></div>
+									</div>
+									<div class="text_box">
+										<h3><span>ヒアリング</span></h3>
+										<p>ケアマネジャーがご自宅や入院先に訪問させていただき健康状態や生活のご様子、ご希望などをお聞きさせていただきます。</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="num"><span class="small">#</span>04</div>
+								<div class="inner">
+									<div class="icon_box">
+										<div><img src="/common/img/top/consul/consul_icon04.webp" alt=""></div>
+									</div>
+									<div class="text_box">
+										<h3><span>サービス計画書作成</span></h3>
+										<p>ご本人・ご家族の方と相談しながらご希望の生活が実現するようサービス計画書を作成させていただきます。</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="num"><span class="small">#</span>05</div>
+								<div class="inner">
+									<div class="icon_box">
+										<div><img src="/common/img/top/consul/consul_icon05.webp" alt=""></div>
+									</div>
+									<div class="text_box">
+										<h3><span>契約</span></h3>
+										<p>サービス事業所と契約を結びます。スムーズにサービスが導入できるよう調整させていただきます。</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="num"><span class="small">#</span>06</div>
+								<div class="inner">
+									<div class="icon_box">
+										<div><img src="/common/img/top/consul/consul_icon06.webp" alt=""></div>
+									</div>
+									<div class="text_box">
+										<h3><span>経過観察</span></h3>
+										<p>経過の観察させていただき状況に応じてプランの変更をさせていただきます。</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="deco _02"><img src="/common/img/top/deco/leaf_deco.webp" alt=""></div>
+
+					</div>
+
+				</div>
+				<div class="iwork">
+					<div class="container">
+						<div class="text_area">
+							<div class="common_title work_title">
+								<div class="title_box">
+									<h2>業務内容</h2>
+								</div>
+
+							</div>
+							<p>要介護者等や介護者の相談援助、申請及び更新申請の代行、介護支援サービスのための課題分析、介護サービス計画書の作成、サービス担当者会議の開催、サービスに関する説明と同意の確認、サービス実施事業所との連絡調整、要介護者等の継続的な状況把握、在宅から介護施設に入所する場合の援助など、給付業務</p>
+						</div>
+						<div class="image_wrapper">
+							<img src="/common/img/top/work/work_image.webp" alt="">
+							<div class="deco"><img src="/common/img/top/deco/flower_deco.webp" alt=""></div>
+						</div>
+
+					</div>
+				</div>
+				<div class="iservice">
+					<div class="service_image">
+						<img src="/common/img/top/service/service_image.webp" alt="">
 					</div>
 				</div>
 				<div class="iinfo">
+
 					<div class="container">
+						<div class="title_box">
+							<h2>施設情報</h2>
+						</div>
 						<div class="info_area">
-							<div class="info_1">
-								<div class="common_title _info_title">
-									<div class="title_box">
-										<span class="title _en">infomation</span>
-										<span class="title _ja">
-											<img src="/common/img/top/title/infomation.webp" alt="施設情報" loading="lazy" width="155" height="35">
-										</span>
-									</div>
-								</div>
-								<div class="info_list">
-									<div class="info_item">
-										<div class="title_box">
-											<img src="/common/img/icon/01.webp" alt="" loading="lazy" width="25" height="25">
-											<span class="title">施設名</span>
-										</div>
-										<div class="text">小規模多機能型居宅介護ポプリ</div>
-									</div>
-									<div class="info_item">
-										<div class="title_box">
-											<img src="/common/img/icon/02.webp" alt="" loading="lazy" width="25" height="25">
-											<span class="title">住所</span>
-										</div>
-										<div class="text">〒306-0045　<span class="address">茨城県古河市駒ヶ崎14-1</span></div>
-									</div>
-									<div class="info_item">
-										<div class="title_box">
-											<img src="/common/img/icon/03.webp" alt="" loading="lazy" width="25" height="25">
-											<span class="title">営業日</span>
-										</div>
-										<div class="text">365日</div>
-									</div>
-									<div class="info_item">
-										<div class="title_box">
-											<img src="/common/img/icon/04.webp" alt="" loading="lazy" width="25" height="25">
-											<span class="title">営業時間</span>
-										</div>
-										<div class="text">9：00 ～ 16：00（通い）</div>
-									</div>
-									<div class="info_item">
-										<div class="title_box">
-											<img src="/common/img/icon/05.webp" alt="" loading="lazy" width="25" height="25">
-											<span class="title">訪問</span>
-										</div>
-										<div class="text">24時間</div>
-									</div>
-								</div>
-							</div>
 							<div class="info_2">
 								<div class="map_wrap">
 									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1742.4014078211487!2d139.70571512666226!3d36.17068967569332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018b54c6cef390f%3A0xb6fb5e851bf15232!2z44CSMzA2LTAwNDUg6Iyo5Z-O55yM5Y-k5rKz5biC6aeS44Kx5bSO77yR77yU!5e0!3m2!1sja!2sjp!4v1718704608239!5m2!1sja!2sjp" width="1800" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								</div>
 							</div>
+							<div class="info_1">
+								<div class="info_list">
+									<!-- <div class="info_item">
+										<div class="title_box">
+											<img src="/common/img/icon/01.webp" alt="" loading="lazy" width="25" height="25">
+											<span class="title">施設名</span>
+										</div>
+										<div class="text">小規模多機能型居宅介護ポプリ</div>
+									</div> -->
+									<div class="info_item">
+										<div class="title_box">
+											<span class="title">住所</span>
+										</div>
+										<div class="text">〒0280-47-1106　<span class="address">茨城県古河市鴻巣1175-1</span></div>
+									</div>
+									<div class="info_item">
+										<div class="title_box">
+											<span class="title">TEL</span>
+										</div>
+										<div class="text">0280-47-1106（居宅介護支援事業所直通）</div>
+									</div>
+									<div class="info_item">
+										<div class="title_box">
+											<span class="title">FAX</span>
+										</div>
+										<div class="text">0280-47-1107</div>
+									</div>
+									<div class="info_item">
+										<div class="title_box">
+											<span class="title">実施地域</span>
+										</div>
+										<div class="text">茨城県古河市、埼玉県旧北川辺町、旧大利根町</div>
+									</div>
+									<div class="info_item">
+										<div class="title_box">
+											<span class="title">営業時間</span>
+										</div>
+										<div class="text">8：30～17：00</div>
+									</div>
+									<div class="info_item">
+										<div class="title_box">
+											<span class="title">利用料金</span>
+										</div>
+										<div class="text">全額介護保険からの給付となるため自己負担の発生はありません</div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>

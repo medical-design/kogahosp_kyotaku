@@ -1029,26 +1029,20 @@
 /**************************
 	お知らせ
 */
-.news_wrap {
-	//padding-top: 40px;
-}
 
 .newsline_list {
-	background-color: #ffffff;
 	border-radius: 20px;
-	padding: 12px 20px;
+	padding: 12px 0;
 
 	> li {
-		&:not(:last-of-type) {
-			border-bottom: 1px solid #fdf5f2;
-		}
+		border-bottom: 1px solid #b4d5d5;
 	}
 
 	&._news_page {
 		padding: 12px 0;
 
 		> li {
-			border-bottom: 1px solid #f9cfc1;
+			border-bottom: 1px solid #b4d5d5;
 		}
 
 		.newsline {
@@ -1063,6 +1057,7 @@
 			> .head {
 				.date {
 					@include mixin_project.jost_m;
+					color: #9bc5c5;
 
 					margin-top: 0.3rem;
 				}
@@ -1120,16 +1115,16 @@
 		}
 
 		.date {
-			@include mixin_project.jost_m;
+			@include mixin_project.jost_sb;
 
 			font-size: var.$fontsize18;
 			letter-spacing: 0.1em;
-			color: #7b7b7b;
+			color: #9bc5c5;
 
 			.year,
 			.month,
 			.day {
-				color: #7b7b7b;
+				color: #9bc5c5;
 			}
 
 			@media #{var.$sp} {
@@ -1146,7 +1141,7 @@
 			font-size: var.$fontsize18;
 			display: flex;
 			line-height: 1.5;
-			color: #4d4741;
+			color: #333333;
 
 			@media #{var.$sp} {
 				font-size: var.$fontsize16;
