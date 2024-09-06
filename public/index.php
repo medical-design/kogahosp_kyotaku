@@ -26,7 +26,6 @@
 						<div class="img_wrap">
 							<img class="bg" src="/common/img/top/mv/main.webp" alt="" loading="lazy">
 							<img class="deco _bottom" src="/common/img/top/mv/bg_deco.webp" alt="" loading="lazy">
-							<img class="deco _tree" src="/common/img/top/mv/deco.webp" alt="" loading="lazy" width="135" height="160">
 						</div>
 					</div>
 				</div>
@@ -38,7 +37,7 @@
 						<li class="pagelink"><a href="#section3"><span>業務内容</span></a></li>
 						<li class="pagelink"><a href="#section4"><span>介護保険内<br>サービス</span></a></li>
 						<li class="pagelink"><a href="#section5"><span>施設情報</span></a></li>
-						<li class="pagelink"><a href="https://www.kogahosp.jp/recruit/shiki/" target="_blank"><span>お問い合わせ</span></a></li>
+						<li class="pagelink"><a href="https://www.kogahosp.jp/recruit/shiki/" target="_blank"><span class="ext">採用情報</span></a></li>
 					</ul>
 				</div>
 				<div class="igreeting" id="section1">
@@ -219,9 +218,33 @@
 					</div>
 				</div>
 				<div class="iservice">
-					<div class="service_image">
-						<img src="/common/img/top/service/service_image.webp" alt="">
+					<div class="inner">
+						<div class="service_image">
+							<img src="/common/img/top/service/service_image.webp" alt="">
+						</div>
 					</div>
+					<div class="container">
+						<div class="title_box">
+							<h2>在宅で介護保険の使えるサービス</h2>
+						</div>
+						<div class="service_column">
+							<div class="l">
+								<div class="h3_box">
+									<h3>支援1・2</h3>
+								</div>
+
+								<p>介護予防支援、介護予防訪問介護、介護予防訪問入浴、介護予防居宅療養管理指導、介護予防訪問介護、介護予防通所介護、介護予防所リハビリテーション、介護予防特定施設入所者生活介護、介護予防短期入所療養介護、介護予防福祉用具貸与、介護予防住宅改修費支給、特定介護予防福祉用具購入</p>
+							</div>
+							<div class="r">
+								<div class="h3_box">
+									<h3>要介護1〜5</h3>
+								</div>
+								<p>居宅介護支援、訪問介護、訪問入浴、居宅療養管理指導、訪問介護、通所介護、通所リハビリテーション、特定施設入居者生活介護、短期入所生活介護、短期入所療養介護、福祉用具貸与、居宅介護住宅改修費支給、特定福祉用具購入</p>
+
+							</div>
+						</div>
+					</div>
+
 				</div>
 				<div class="iinfo">
 
@@ -288,35 +311,11 @@
 				</div>
 				<div class="icontact">
 					<div class="container">
-						<div class="contact_wrap">
-							<img class="deco" src="/common/img/top/illust/04.webp" alt="" loading="lazy" width="390" height="375">
-							<div class="top">
-								<img src="/common/img/top/title/contact.webp" alt="お問い合わせ" loading="lazy" width="194" height="35">
-							</div>
-							<div class="bottom">
-								<span class="text">お問い合わせ、お申し込みなどはこちらまでお願いします。</span>
-								<ul class="contact_list">
-									<li>
-										<img src="/common/img/icon/tel.webp" alt="" loading="lazy" width="42" height="42">
-										<div class="title">
-											<span class="num"><a href="tel:0280-47-4306">0280-47-4306</a></span>
-											<span class="rear_text">（ポプリ直通）</span>
-										</div>
-									</li>
-									<li>
-										<img src="/common/img/icon/fax.webp" alt="" loading="lazy" width="42" height="42">
-										<div class="title">
-											<span class="num"><a href="tel:0280-47-4306">0280-47-4306</a></span>
-										</div>
-									</li>
-									<li>
-										<img src="/common/img/icon/mail.webp" alt="" loading="lazy" width="42" height="42">
-										<div class="title">
-											<span class="mail">popuri@kogahosp.jp</span>
-										</div>
-									</li>
-								</ul>
-							</div>
+						<h2>お問い合わせはこちら</h2>
+						<div class="tel_box">
+							<span class="contact_icon"><img src="/common/img/icon/contact_icon.webp" alt=""></span>
+							<span class="num"><a href="tel:0280-47-4306">0280-47-4306</a></span><span class="desc">（居宅介護支援事業所直通）</span>
+
 						</div>
 					</div>
 				</div>

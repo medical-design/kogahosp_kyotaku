@@ -1,5 +1,5 @@
 <div class="sidebar">
 	<a href="https://www.kogahosp.jp/" target="_blank">
-		<img src="/common/img/side.webp" alt="" loading="lazy" width="70" height="300">
+		<div><span>古河総合病院</span></div>
 	</a>
 </div>

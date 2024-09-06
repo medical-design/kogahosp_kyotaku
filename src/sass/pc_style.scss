@@ -297,8 +297,6 @@ body {
 	}
 }
 
-.header_container {
-}
 
 .header {
 	&__inner {
@@ -308,9 +306,6 @@ body {
 		.open_btn {
 			display: none;
 		}
-	}
-
-	&__l {
 	}
 
 	&__r {
@@ -327,6 +322,9 @@ body {
 		&__ul {
 			display: flex;
 			align-items: center;
+
+
+			
 			justify-content: flex-end;
 			column-gap: 28px;
 
@@ -376,7 +374,6 @@ body {
 			width: 188px;
 			display: block;
 			background-color: var.palette("button", "default");
-			border-radius: 20px;
 			padding: 6px 10px;
 			text-align: center;
 			box-sizing: border-box;
@@ -407,10 +404,10 @@ body {
 				&::before {
 					content: "";
 					display: inline-block;
-					background: url("../img/icon/mail_white.webp") 0 0 no-repeat transparent;
-					background-size: 23px 31px;
-					width: 23px;
-					height: 16px;
+					background: url("../img/icon/tel_icon.webp") 0 0 no-repeat transparent;
+					background-size: 15px 20.5px;
+					width: 15px;
+					height: 20.5px;
 					margin-right: 10px;
 				}
 			}

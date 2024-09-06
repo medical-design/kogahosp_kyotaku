@@ -10,21 +10,15 @@
 				</div>
 			</a>
 			<a class="close_btn" id="close_menu" href="#drawer"></a>
-			<div class="header__l">
-				<div class="logo_wrap">
-					<a href="/">
-						<img src="/common/img/logo.webp" alt="医療法人徳洲会 小規模多機能型居宅介護 ポプリ" loading="lazy" width="264" height="40">
-					</a>
-				</div>
+			<div class="logo_wrap">
+				<a href="/">
+					<img src="/common/img/logo.webp" alt="医療法人徳洲会 古河総合病院居宅介護支援事業" loading="lazy" width="376" height="49">
+				</a>
 			</div>
-			<div class="header__r">
-				<div class="header__gnav">
-					<div><?php include DIR_SITE_INCLUDE . 'menu/pc_menu.php' ?></div>
-				</div>
-				<div class="contact_btn">
-					<a href="/contact/"><span class="text">お問い合わせ</span></a>
-				</div>
-			</div>
+
+		</div>
+		<div class="contact_btn">
+			<a href="/contact/"><span class="text">お問い合わせ</span></a>
 		</div>
 	</header>
 </div>
