@@ -313,8 +313,12 @@
 					<div class="container">
 						<h2>お問い合わせはこちら</h2>
 						<div class="tel_box">
-							<span class="contact_icon"><img src="/common/img/icon/contact_icon.webp" alt=""></span>
-							<span class="num"><a href="tel:0280-47-4306">0280-47-4306</a></span><span class="desc">（居宅介護支援事業所直通）</span>
+							<div>
+								<span class="contact_icon"><img src="/common/img/icon/contact_icon.webp" alt=""></span>
+								<span class="num"><a href="tel:0280-47-4306">0280-47-4306</a></span>
+							</div>
+
+							<span class="desc">（居宅介護支援事業所直通）</span>
 
 						</div>
 					</div>

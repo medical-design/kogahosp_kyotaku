@@ -44,7 +44,7 @@ $pc_th_width: 280px;
 	font-size: var.$fontsize13;
 	font-weight: bold;
 	border-radius: 20px;
-	background-color: #ed8767;
+	background-color: #66acac;
 	width: 50px;
 	height: 23px;
 	display: inline-block;
@@ -849,7 +849,7 @@ $pc_th_width: 280px;
 		.info {
 			width: 38px;
 			height: 38px;
-			border: solid 1px #ed8767;
+			border: solid 1px #66acac;
 			border-radius: 50%;
 			align-content: center;
 			letter-spacing: 0.08em;
@@ -862,14 +862,14 @@ $pc_th_width: 280px;
 			}
 
 			.text {
-				color: #ed8767;
+				color: #66acac;
 				font-size: var.$fontsize16;
 			}
 		}
 
 		&.active {
 			.info {
-				background-color: #ed8767;
+				background-color: #66acac;
 
 				.text {
 					color: #ffffff;
