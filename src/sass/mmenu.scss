@@ -66,54 +66,54 @@ body {
 		}
 	}
 
-	.contact_btn {
-		padding-top: 20px;
-		padding-bottom: 20px;
+	// .contact_btn {
+	// 	padding-top: 20px;
+	// 	padding-bottom: 20px;
 
-		a {
-			width: 188px;
-			display: block;
-			background-color: var.palette("button", "default");
-			padding: 8px 10px;
-			text-align: center;
-			box-sizing: border-box;
-			border: 1px solid transparent;
-			transition: background-color 0.2s;
-			margin: 0 auto;
+	// 	a {
+	// 		width: 188px;
+	// 		display: block;
+	// 		background-color: var.palette("button", "default");
+	// 		padding: 8px 10px;
+	// 		text-align: center;
+	// 		box-sizing: border-box;
+	// 		border: 1px solid transparent;
+	// 		transition: background-color 0.2s;
+	// 		margin: 0 auto;
 
-			&:hover {
-				background-color: #ffffffff;
-				border: 1px solid var.palette("button", "default");
+	// 		&:hover {
+	// 			background-color: #ffffffff;
+	// 			border: 1px solid var.palette("button", "default");
 
-				.text {
-					color: var.palette("button", "default");
+	// 			.text {
+	// 				color: var.palette("button", "default");
 
-					&::before {
-						background-position-y: -16px;
-					}
-				}
-			}
+	// 				&::before {
+	// 					background-position-y: -16px;
+	// 				}
+	// 			}
+	// 		}
 
-			.text {
-				color: #ffffff;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-weight: bold;
-				letter-spacing: 0.1em;
+	// 		.text {
+	// 			color: #ffffff;
+	// 			display: flex;
+	// 			align-items: center;
+	// 			justify-content: center;
+	// 			font-weight: bold;
+	// 			letter-spacing: 0.1em;
 
-				&::before {
-					content: "";
-					display: inline-block;
-					background: url("../img/icon/mail_white.webp") 0 0 no-repeat transparent;
-					background-size: 23px 31px;
-					width: 23px;
-					height: 16px;
-					margin-right: 10px;
-				}
-			}
-		}
-	}
+	// 			&::before {
+	// 				content: "";
+	// 				display: inline-block;
+	// 				background: url("../img/icon/mail_white.webp") 0 0 no-repeat transparent;
+	// 				background-size: 23px 31px;
+	// 				width: 23px;
+	// 				height: 16px;
+	// 				margin-right: 10px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 
 .mm-navbar {

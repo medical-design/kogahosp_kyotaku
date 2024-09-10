@@ -369,48 +369,48 @@ body {
 		}
 	}
 
-	.contact_btn {
-		a {
-			width: 188px;
-			display: block;
-			background-color: var.palette("button", "default");
-			padding: 6px 10px;
-			text-align: center;
-			box-sizing: border-box;
-			border: 1px solid transparent;
-			transition: background-color 0.2s;
+	// .contact_btn {
+	// 	a {
+	// 		width: 188px;
+	// 		display: block;
+	// 		background-color: var.palette("button", "default");
+	// 		padding: 6px 10px;
+	// 		text-align: center;
+	// 		box-sizing: border-box;
+	// 		border: 1px solid transparent;
+	// 		transition: background-color 0.2s;
 
-			&:hover {
-				background-color: #ffffffff;
-				border: 1px solid var.palette("button", "default");
+	// 		&:hover {
+	// 			background-color: #ffffffff;
+	// 			border: 1px solid var.palette("button", "default");
 
-				.text {
-					color: var.palette("button", "default");
+	// 			.text {
+	// 				color: var.palette("button", "default");
 
-					&::before {
-						background-position-y: -16px;
-					}
-				}
-			}
+	// 				&::before {
+	// 					background-position-y: -16px;
+	// 				}
+	// 			}
+	// 		}
 
-			.text {
-				color: #ffffff;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-weight: bold;
-				letter-spacing: 0.1em;
+	// 		.text {
+	// 			color: #ffffff;
+	// 			display: flex;
+	// 			align-items: center;
+	// 			justify-content: center;
+	// 			font-weight: bold;
+	// 			letter-spacing: 0.1em;
 
-				&::before {
-					content: "";
-					display: inline-block;
-					background: url("../img/icon/tel_icon.webp") 0 0 no-repeat transparent;
-					background-size: 15px 20.5px;
-					width: 15px;
-					height: 20.5px;
-					margin-right: 10px;
-				}
-			}
-		}
-	}
+	// 			&::before {
+	// 				content: "";
+	// 				display: inline-block;
+	// 				background: url("../img/icon/tel_icon.webp") 0 0 no-repeat transparent;
+	// 				background-size: 15px 20.5px;
+	// 				width: 15px;
+	// 				height: 20.5px;
+	// 				margin-right: 10px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }

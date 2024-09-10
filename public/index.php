@@ -27,6 +27,9 @@
 							<img class="bg" src="/common/img/top/mv/main.webp" alt="" loading="lazy">
 							<img class="deco _bottom" src="/common/img/top/mv/bg_deco.webp" alt="" loading="lazy">
 						</div>
+						<div class="sp_img_wrap">
+							<img class="bg" src="/common/img/top/mv/mv_sp.webp" alt="" loading="lazy">
+						</div>
 					</div>
 				</div>
 
@@ -40,7 +43,7 @@
 						<li class="pagelink"><a href="https://www.kogahosp.jp/recruit/shiki/" target="_blank"><span class="ext">採用情報</span></a></li>
 					</ul>
 				</div>
-				<div class="igreeting" id="section1">
+				<div class="igreeting">
 					<div class="greeting_container">
 						<div class="common_title greeting_title">
 							<div class="title_box">
@@ -63,7 +66,7 @@
 						<div class="deco _02"><img src="/common/img/top/deco/leaf_deco.webp" alt=""></div>
 					</div>
 				</div>
-				<div class="iabout">
+				<div class="iabout" id="section1">
 					<div class="about_title"><img src="/common/img/top/about/about_title.webp" alt="居宅介護支援事業とは"></div>
 					<p>居宅介護支援事業所ではケアマネジャーが関係市町村、地域の保険・医療・福祉サービスとの綿密な連携を図り介護保険や介護の相談などを承り総合的な介護サービス提供が受けられるよう調整を行わせていただいております。</p>
 				</div>
@@ -115,7 +118,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="iconsul">
+				<div class="iconsul" id="section2">
 					<div class="container">
 						<div class="title_box">
 							<h2>新規御相談</h2>
@@ -199,7 +202,7 @@
 					</div>
 
 				</div>
-				<div class="iwork">
+				<div class="iwork" id="section3">
 					<div class="container">
 						<div class="text_area">
 							<div class="common_title work_title">
@@ -217,7 +220,7 @@
 
 					</div>
 				</div>
-				<div class="iservice">
+				<div class="iservice" id="section4">
 					<div class="inner">
 						<div class="service_image">
 							<img src="/common/img/top/service/service_image.webp" alt="">
@@ -246,7 +249,7 @@
 					</div>
 
 				</div>
-				<div class="iinfo">
+				<div class="iinfo" id="section5">
 
 					<div class="container">
 						<div class="title_box">
@@ -255,8 +258,9 @@
 						<div class="info_area">
 							<div class="info_2">
 								<div class="map_wrap">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1742.4014078211487!2d139.70571512666226!3d36.17068967569332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018b54c6cef390f%3A0xb6fb5e851bf15232!2z44CSMzA2LTAwNDUg6Iyo5Z-O55yM5Y-k5rKz5biC6aeS44Kx5bSO77yR77yU!5e0!3m2!1sja!2sjp!4v1718704608239!5m2!1sja!2sjp" width="1800" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3220.7070487868496!2d139.70527837629578!3d36.173682772432365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018b54b137e8b4b%3A0x6b08184194008705!2z44CSMzA2LTAwNDEg6Iyo5Z-O55yM5Y-k5rKz5biC6bS75bej77yR77yR77yX77yV4oiS77yR!5e0!3m2!1sja!2sjp!4v1725942249880!5m2!1sja!2sjp" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								</div>
+
 							</div>
 							<div class="info_1">
 								<div class="info_list">
@@ -309,7 +313,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="icontact">
+				<div class="icontact" id="section06">
 					<div class="container">
 						<h2>お問い合わせはこちら</h2>
 						<div class="tel_box">

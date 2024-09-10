@@ -9,19 +9,19 @@
 
 			<ul class="link_list">
 				<li>
-					<a href="/about/features/">お問い合わせ</a>
+					<a href="/#section06">お問い合わせ</a>
 				</li>
 				<li>
-					<a href="/about/specific_health/" class="ext">個人情報保護方針</a>
+					<a href="https://www.kogahosp.jp/privacy/" target="_blank" class="ext">個人情報保護方針</a>
 				</li>
 				<li>
-					<a href="/about/specific_health/" class="ext">古河総合病院</a>
+					<a href="https://www.kogahosp.jp/" target="_blank" class="ext">古河総合病院</a>
 				</li>
 				<li>
-					<a href="/about/facility/" class="pdf">居宅【重要事項説明書】</a>
+					<a href="/common/pdf/important_desc.pdf" target="_blank" class="pdf">居宅【重要事項説明書】</a>
 				</li>
 				<li>
-					<a href="/about/interview/" class="pdf">居宅【運営規程】</a>
+					<a href="/common/pdf/operational_rules.pdf" target="_blank" class="pdf">居宅【運営規程】</a>
 				</li>
 			</ul>
 			<div class="footer_logo">
