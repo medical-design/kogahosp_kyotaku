@@ -844,7 +844,7 @@ var popuri = new (function () {
 					{
 						position: "top",
 						content: [
-							"<div class='header__inner'><a class='close_btn' id='close_menu' href='#drawer'></a><div class='header__l'><div class='logo_wrap'><a href=' / '><img src='/common/img/logo.webp' alt='医療法人徳洲会 小規模多機能型居宅介護 ポプリ' loading='lazy' width='315' height='40'></a></div></div></div>",
+							"<div class='header__inner'><a class='close_btn' id='close_menu' href='#drawer'></a><div class='header__l'><div class='logo_wrap'><a href=' / '><img src='/common/img/logo.webp' alt='医療法人徳洲会 古河総合病院 居宅介護支援事業' loading='lazy' width='315' height='40'></a></div></div></div>",
 							"close",
 						],
 					},

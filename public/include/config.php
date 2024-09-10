@@ -35,8 +35,8 @@ define('IS_SSL_SITE', true);
 define('IS_DEV', true);
 
 // サイトの日本語名
-define('SITE_NAME', '医療法人徳洲会　小規模多機能型居宅介護ポプリ');
-define('SITE_NAME_L', '医療法人徳洲会　小規模多機能型居宅介護ポプリ');
+define('SITE_NAME', '医療法人徳洲会 古河総合病院 居宅介護支援事業');
+define('SITE_NAME_L', '医療法人徳洲会 古河総合病院 居宅介護支援事業');
 
 
 define('GOOGLE_MAP_API', '');
@@ -49,8 +49,8 @@ define('WP_CATEGORY_MAKE_CRON_INTERVAL_MINUTE', 1);
  *******************************************************************************/
 
 // meta keywords / description のデフォルト
-$metaKeywordsDefault = '医療法人徳洲会　小規模多機能型居宅介護ポプリ';
-$metaDescriptionDefault = '医療法人徳洲会　小規模多機能型居宅介護ポプリ';
+$metaKeywordsDefault = '医療法人徳洲会 古河総合病院 居宅介護支援事業';
+$metaDescriptionDefault = '医療法人徳洲会 古河総合病院 居宅介護支援事業';
 
 // 個別にキーワードを設定する際の、共通キーワード（※最後に , を付けること）
 $metaKeywordsCommon  = '';

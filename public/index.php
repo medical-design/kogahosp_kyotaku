@@ -264,13 +264,6 @@
 							</div>
 							<div class="info_1">
 								<div class="info_list">
-									<!-- <div class="info_item">
-										<div class="title_box">
-											<img src="/common/img/icon/01.webp" alt="" loading="lazy" width="25" height="25">
-											<span class="title">施設名</span>
-										</div>
-										<div class="text">小規模多機能型居宅介護ポプリ</div>
-									</div> -->
 									<div class="info_item">
 										<div class="title_box">
 											<span class="title">住所</span>
