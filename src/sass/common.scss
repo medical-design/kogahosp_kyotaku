@@ -1063,39 +1063,39 @@
 	}
 }
 
-.sidebar {
-	position: fixed;
-	top: 110px;
-	right: 0;
-	z-index: 2000;
+// .sidebar {
+// 	position: fixed;
+// 	top: 110px;
+// 	right: 0;
+// 	z-index: 2000;
 
-	a {
-		img {
-			transform: translateX(13px);
-			transition: transform 0.15s var.$easeOutQuint;
-		}
-		transition: 0.3s all;
+// 	a {
+// 		img {
+// 			transform: translateX(13px);
+// 			transition: transform 0.15s var.$easeOutQuint;
+// 		}
+// 		transition: 0.3s all;
 
-		&:hover {
-			opacity: 0.7;
-			transition: 0.3s all;
-			img {
-				transform: none;
-			}
-		}
-	}
+// 		&:hover {
+// 			opacity: 0.7;
+// 			transition: 0.3s all;
+// 			img {
+// 				transform: none;
+// 			}
+// 		}
+// 	}
 
-	@media #{var.$sp} {
-		// display: none;
-		a {
-			img {
-				transform: translateX(13px);
-				width: 60px;
-				height: auto;
-			}
-		}
-	}
-}
+// 	@media #{var.$sp} {
+// 		// display: none;
+// 		a {
+// 			img {
+// 				transform: translateX(13px);
+// 				width: 60px;
+// 				height: auto;
+// 			}
+// 		}
+// 	}
+// }
 
 /**************************
 	お知らせ
@@ -1550,18 +1550,28 @@
 			span{
 				position: relative;
 				padding-bottom: 22px;
+				text-align: center;
+				display: block;
 				&::after {
-					display: block;
+					display: inline-block;
 					content: "";
 					width: 17px;
 					height: 14px;
 					background: url("/common/img/icon/ext.webp") no-repeat;
-					background-size: contain;
+					background-size: 17px;
 					position: absolute;
 					bottom: 0;
-					left: 0;
-					right: 0;
-					margin: auto;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+			@media (max-width: 768px) {
+				span {
+					padding-bottom: 22px;
+					&::after {
+						left: 50%;
+						transform: translateX(-50%);
+					}
 				}
 			}
 		}
